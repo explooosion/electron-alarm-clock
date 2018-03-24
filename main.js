@@ -66,8 +66,7 @@ function createTray() {
     let appIcon = null
     const iconPath = path.join(__dirname, 'clock.ico')
 
-    const contextMenu = Menu.buildFromTemplate([
-        {
+    const contextMenu = Menu.buildFromTemplate([{
             label: 'AlarmClock',
             click() {
                 win.show()
