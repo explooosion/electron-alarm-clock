@@ -5,7 +5,8 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "build": "electron-packager . AlarmClock --platform=win32 --arch=ia32 --icon=clock.ico --squirrel-install --prune=true --electron-version=1.7.9 --overwrite --ignore=node_modules --ignore=.gitignore --ignore=.vscode --ignore=installer --ignore=evo-win32-ia32 --ignore=lib"
+    "build": "electron-packager . AlarmClock --platform=win32 --arch=ia32 --icon=clock.ico --squirrel-install --prune=true --electron-version=1.7.9 --overwrite --ignore=node_modules --ignore=.gitignore --ignore=.vscode --ignore=installer --ignore=AlarmClock-win32-ia32",
+    "pack": "grunt"
   },
   "repository": {
     "type": "git",
@@ -19,16 +20,19 @@
   },
   "homepage": "https://github.com/explooosion/electron-alarm-clock#readme",
   "devDependencies": {
-    "electron": "^1.8.4",
     "babel-eslint": "^8.0.1",
+    "electron": "^1.8.4",
+    "electron-packager": "^11.1.0",
     "eslint": "^4.11.0",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-formatting": "0.0.4",
     "eslint-plugin-import": "^2.8.0",
-    "eslint-plugin-mocha": "^4.11.0"
+    "eslint-plugin-mocha": "^4.11.0",
+    "grunt": "^1.0.2",
+    "grunt-electron-installer": "^2.1.0"
   },
   "dependencies": {
-    "electron-packager": "^11.1.0",
+    "moment": "^2.21.0",
     "node-notifier": "^5.2.1"
   }
 }
