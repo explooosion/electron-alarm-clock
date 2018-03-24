@@ -1,2 +1,2 @@
-# electron-alarm-clock
-Sample apps for Electron
+# electron-sample-alarmClock
+Sample app for Electron

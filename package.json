@@ -1,0 +1,29 @@
+{
+  "name": "electron-alarm-clock",
+  "version": "1.0.0",
+  "description": "Sample app for Electron",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/explooosion/electron-alarm-clock"
+  },
+  "keywords": [],
+  "author": "Robby <ta7382@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/explooosion/electron-alarm-clock/issues"
+  },
+  "homepage": "https://github.com/explooosion/electron-alarm-clock#readme",
+  "devDependencies": {
+    "electron": "^1.8.4",
+    "babel-eslint": "^8.0.1",
+    "eslint": "^4.11.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-formatting": "0.0.4",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-mocha": "^4.11.0"
+  }
+}
