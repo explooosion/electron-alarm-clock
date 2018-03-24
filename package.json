@@ -4,7 +4,8 @@
   "description": "Sample app for Electron",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "build": "electron-packager . AlarmClock --platform=win32 --arch=ia32 --icon=clock.ico --squirrel-install --prune=true --electron-version=1.7.9 --overwrite --ignore=node_modules --ignore=.gitignore --ignore=.vscode --ignore=installer --ignore=evo-win32-ia32 --ignore=lib"
   },
   "repository": {
     "type": "git",
@@ -25,5 +26,9 @@
     "eslint-plugin-formatting": "0.0.4",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-mocha": "^4.11.0"
+  },
+  "dependencies": {
+    "electron-packager": "^11.1.0",
+    "node-notifier": "^5.2.1"
   }
 }
