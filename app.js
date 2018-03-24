@@ -1,27 +1,29 @@
 const notifier = require('node-notifier')
 const path = require('path')
-
+const moment = require('moment')
 const remote = require('electron').remote
 
 const elNow = document.querySelector('.now-time')
 const elAlarm = document.querySelector('.alarm-time')
 
-let time = new Date()
+// 如果使用者還是不同意授權執行 Notification
+// 最好還是進行適當的處理以避免繼續打擾使用者
+
+let time = moment()
 
 /** Now Time */
-elNow.innerText = `${time.getHours()}:${time.getMinutes()}:${time.getSeconds()}`
+elNow.innerText = moment(time).format('HH:mm:ss')
 
 /** Default Alarm */
-const min = time.getMinutes() === 59 ? 0 : time.getMinutes() + 1
-elAlarm.value = `${time.getHours()}:${min}:0`
-
+// const min = time.getMinutes() === 59 ? 0 : time.getMinutes() + 1
+elAlarm.value = moment(time).add(5, 'seconds').format('HH:mm:ss')
 timer()
 
 /** Now Time */
 function timer() {
     setTimeout(() => {
-        time = new Date()
-        elNow.innerText = `${time.getHours()}:${time.getMinutes()}:${time.getSeconds()}`
+        time = moment()
+        elNow.innerText = moment(time).format('HH:mm:ss')
         check()
         timer()
     }, 1000)
@@ -30,7 +32,7 @@ function timer() {
 /** Check Time */
 function check() {
     if (elNow.innerText === elAlarm.value) {
-        notification('Wake Up!', elAlarm.value)
+        notice('Wake Up!', elAlarm.value)
     }
 }
 
@@ -38,7 +40,11 @@ function check() {
  * System Notification
  * @param {string} msg
  */
-function notification(msg, alarm) {
+function notice(msg, alarm) {
+
+    const window = remote.getCurrentWindow()
+    window.restore()
+    window.show()
 
     // https://github.com/mikaelbr/node-notifier
     notifier.notify({
@@ -48,6 +54,4 @@ function notification(msg, alarm) {
         sound: true,
     })
 
-    const window = remote.getCurrentWindow()
-    window.show()
 }
