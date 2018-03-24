@@ -46,7 +46,7 @@ function notification(msg, alarm) {
         message: `It's ${alarm}. Wake Up!`,
         icon: path.join(__dirname, 'clock.ico'),
         sound: true,
-    });
+    })
 
     const window = remote.getCurrentWindow()
     window.show()

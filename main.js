@@ -54,6 +54,10 @@ function createWindow() {
         win.hide()
     })
 
+    win.on('restore', () => {
+        console.log('restore')
+    })
+
     // Create Tray
     createTray()
 }
