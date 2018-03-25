@@ -1,4 +1,4 @@
-# electron-sample-alarmClock
+# electron-alarm-clock
 Sample app for Electron.
 
 Blog - [Electron - 新手入門 - 做一個鬧鐘吧](https://dotblogs.com.tw/explooosion/2018/03/25/181604)
