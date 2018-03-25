@@ -1,8 +1,8 @@
 
 # Folder
 node_modules
-AlarmClock-win32-ia32
+AlarmClock-win32-x64
+installer64
 
 # File
 package-lock.json
-installer

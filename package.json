@@ -5,7 +5,7 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "build": "electron-packager . AlarmClock --platform=win32 --arch=ia32 --icon=clock.ico --squirrel-install --prune=true --electron-version=1.7.9 --overwrite --ignore=node_modules --ignore=.gitignore --ignore=.vscode --ignore=installer --ignore=AlarmClock-win32-ia32",
+    "build": "electron-packager . AlarmClock --out AlarmClock --overwrite --platform=win32 --arch=x64 --icon=clock.ico --prune=true --squirrel-install --ignore=node_modules/electron-* --electron-version=1.7.9 --ignore=AlarmClock-win32-x64 --version-string.CompanyName=Robby --version-string.ProductName=AlarmClock",
     "pack": "grunt"
   },
   "repository": {
