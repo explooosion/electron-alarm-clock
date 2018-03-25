@@ -1,5 +1,7 @@
 # electron-sample-alarmClock
-Sample app for Electron
+Sample app for Electron.
+
+Blog - [Electron - 新手入門 - 做一個鬧鐘吧](https://dotblogs.com.tw/explooosion/2018/03/25/181604)
 
 ## Installation
 ```bash
@@ -18,4 +20,9 @@ npm start
 ## Build exe
 ```bash
 npm run build
+```
+
+## Packaging
+```bash
+npm run pack
 ```
